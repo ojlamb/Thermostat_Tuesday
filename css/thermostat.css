@@ -1,0 +1,22 @@
+body{
+  text-align: center;
+  background-image: url("sunset.jpg");
+}
+
+header{
+  padding-top: 50px;
+}
+
+#increaseTemp{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#decreaseTemp{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#temp{
+  padding-bottom: 20px;
+}

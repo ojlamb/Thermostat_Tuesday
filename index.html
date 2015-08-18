@@ -3,18 +3,22 @@
 <head>
   <meta charset="utf-8">
   <title>Thermostat</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/thermostat.css">
 </head>
 
 <body>
   <header>
     <h1>Thermostat<h1>
   </header>
+  <a src='sunset.jpg'></a>
   <font size = "10"><div id="temp"></div></font>
-  <p><button id="increaseTemp" type="button">&#8593</button>
-  <p><button id="decreaseTemp" type="button">&#8595</button>
+  <p>
+    <button id="increaseTemp" type="button">&#8593</button>
+    <button id="decreaseTemp" type="button">&#8595</button></p>
   <p><form>Power Saving Mode?
-    <input type="radio" name="powerSave" value="On" checked>On
-    <input type="radio" name="powerSave" value="Off">Off
+    <input id = 'radioOn' type="radio" name="powerSave" value="On" checked>On
+    <input id = 'radioOff' type="radio" name="powerSave" value="Off">Off
   </form></p>
 
   <script type='text/javascript' src="src/Thermostat.js"></script>
