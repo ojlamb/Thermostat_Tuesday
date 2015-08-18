@@ -2,6 +2,7 @@ var Thermostat = function(){
   this.currentTemperature = 20;
   this.maximumTemperature = 25;
   this.minimumTemperature = 10;
+  this.colourCode = 'yellow'
 };
 
 Thermostat.prototype.temperature = function() {
@@ -36,12 +37,12 @@ Thermostat.prototype.resetTemperature = function() {
 
 Thermostat.prototype.colour = function() {
   if(this.currentTemperature < 18){
-    return 'green'
+    this.colourCode = 'green'
   }
   else if (this.currentTemperature < 25) {
-    return 'yellow'
+    this.colourCode = 'yellow'
   }
   else {
-    return 'red'
+    this.colourCode = 'red'
   }
 };
