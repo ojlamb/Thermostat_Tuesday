@@ -41,6 +41,12 @@ describe('Thermostat', function() {
       expect(thermostat.increase()).toEqual(25);
     });
 
+    it('set to On, current temp drops to 25 if above that level', function() {
+      for(i=20; i<30; i++){thermostat.increase()};
+      thermostat.powerSaveOn();
+      expect(thermostat.currentTemperature).toEqual(25);
+    });
+
     it('set to Off, maximum temperature is set to 32', function(){
         thermostat.powerSaveOff();
         for(i=20; i<32; i++){thermostat.increase()};
