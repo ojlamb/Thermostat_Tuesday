@@ -25,3 +25,23 @@ Thermostat.prototype.decrease = function() {
 Thermostat.prototype.powerSaveOn = function() {
   this.maximumTemperature = 25;
 };
+
+Thermostat.prototype.powerSaveOff = function() {
+  this.maximumTemperature = 32;
+};
+
+Thermostat.prototype.resetTemperature = function() {
+  this.currentTemperature = 20
+};
+
+Thermostat.prototype.colour = function() {
+  if(this.currentTemperature < 18){
+    return 'green'
+  }
+  else if (this.currentTemperature < 25) {
+    return 'yellow'
+  }
+  else {
+    return 'red'
+  }
+};
