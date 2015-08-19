@@ -5,31 +5,28 @@ function temperature(){
 var thermostat = new Thermostat();
 temperature();
 
-document.getElementById('increaseTemp').onclick = function(){
-  thermostat.increase();
-  thermostat.colour();
-  temperature();
-};
-
-
-document.getElementById('decreaseTemp').onclick = function(){
-  thermostat.decrease();
-  thermostat.colour();
-  temperature();
-};
-
-var radioElements = document.getElementsByName("powerSave");
-radioElements[0].onclick = function(){
-  if(radioElements[0].checked){
-    thermostat.powerSaveOn();
+$(document).ready(function() {
+  $("#increaseTemp").click(function(){
+    thermostat.increase();
     thermostat.colour();
     temperature();
-  }
-};
-radioElements[1].onclick = function(){
-if(radioElements[1].checked){
-    thermostat.powerSaveOff();
+  });
+
+  $("#decreaseTemp").click(function(){
+    thermostat.decrease();
     thermostat.colour();
     temperature();
-  }
-};
+  });
+
+  $("#radioOn").click(function() {
+      thermostat.powerSaveOn();
+      thermostat.colour();
+      temperature();
+    });
+
+  $("#radioOff").click(function() {
+      thermostat.powerSaveOff();
+      thermostat.colour();
+      temperature();
+    });
+});
